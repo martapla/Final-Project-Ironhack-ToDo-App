@@ -1,0 +1,29 @@
+/* :root {
+    --colorWhite: #ffffff;
+    --colorBlack: #000000;
+    --colorRed: red;
+    --fontSize-sm: 16px;
+    --fontFamily: 'Arial, Helvetica, sans-serif';
+    --fontTitle: 'Arial';
+    --fontBody: 'Helvetica';
+
+} */
+* { 
+    border:solid 1px rgb(255, 127, 225); 
+}
+
+/* SignIn Component */
+.form-sign-in {
+    border:solid 3px aquamarine;
+
+}
+
+/* h1 {
+    color: var(--colorRed);
+} */
+
+/* SignUp Component */
+
+/* Home view */
+
+/* Account View */
