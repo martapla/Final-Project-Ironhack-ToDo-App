@@ -56,3 +56,15 @@ __El objetivo__ de este proyecto es poner en practica los conocimientos de Vue.j
 * Preparar el README con la descripcion del proyecto
 * Preparar la presentacion del proyecto
 * Implementar funcionalidad del Timer
+
+
+## Project Journal:
+
+### 5/12/2022:
+* Read Documentation.
+* Start some Css at Sign In, Sign Up.
+
+### 6/12/2022:
+* Create Sign Up, Sign In and Sign Out.
+* Start AddTasks.
+

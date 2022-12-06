@@ -20,16 +20,16 @@ onMounted(async () => {
   try {
     await userStore.fetchUser(); // here we call fetch user
     if (!user.value) {
-      // redirect them to logout if the user is not there
+      //redirect them to logout if the user is not there
       appReady.value = true;
       router.push({ path: "/auth/login" });
     } else {
-      // continue to dashboard
-      // router.push({ path: "/" });
+      //continue to dashboard
+       router.push({ path: "/" });
     }
   } catch (e) {
     console.log(e);
-  }
+ }
 });
 </script>
 

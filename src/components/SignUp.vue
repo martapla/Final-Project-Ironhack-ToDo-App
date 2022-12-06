@@ -90,6 +90,7 @@ const signUp = async () => {
       await useUserStore().signUp(email.value, password.value);
       // redirects user to the homeView
       redirect.push({ path: "/auth/login" });
+      console.log("hi");
     } catch (error) {
       // displays error message
       errorMsg.value = error.message;

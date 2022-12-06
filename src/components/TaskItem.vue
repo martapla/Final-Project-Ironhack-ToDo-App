@@ -1,6 +1,7 @@
 <template>
 <div class="container">
     <h3>{{task.title}}</h3>
+    <p>{{task.description}}</p>
     <button @click="deleteTask">Delete {{task.title}}</button>
 </div>
 </template>

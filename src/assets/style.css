@@ -10,11 +10,26 @@
 } */
 * { 
     border:solid 1px rgb(255, 127, 225); 
+   
+    /* margin:0;
+    box-sizing: border-box; */
 }
 
+
 /* SignIn Component */
+
+#app {
+
+}
 .form-sign-in {
     border:solid 3px aquamarine;
+}
+.container {
+   
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
 
 }
 

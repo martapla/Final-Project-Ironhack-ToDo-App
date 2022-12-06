@@ -8,7 +8,7 @@
       <!-- Estamos en la ruta de login. Aquí deberíais crear un form con la lógica correspondiente para que este permita al usuario loguearse con su email y su contraseña. Miraros la lógica de SignUp si necesitáis inspiración :) -->
     </p>
 
-    <form @submit.prevent="signUp" class="form-sign-in">
+    <form @submit.prevent="signIn" class="form-sign-in">
       <div class="form">
           <div class="form-input">
             <label class="input-field-label">E-mail</label>
@@ -32,24 +32,55 @@
               required
             />
           </div>
+
+          <button class="button" type="submit">Sign In</button>
+          <p>Dont have an account? 
+            <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/>
+          </p>
         </div>  
       </form>
 
-    <p>Dont have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p>
+      <div v-show="errorMsg">{{errorMsg}}</div>
   </div>
 
 </template>
 
 <script setup>
+import { ref, computed } from "vue";
 import PersonalRouter from "./PersonalRouter.vue";
+import { supabase } from "../supabase";
+import { useRouter } from "vue-router";
+import { useUserStore } from "../stores/user";
+import { storeToRefs } from "pinia";
+
 
 // Route Variables
 const route = "/auth/signup";
 const buttonText = "Sign Up";
 
+// Input Fields
+const email = ref("");
+const password = ref("");
+
+// Error Message
+const errorMsg = ref("");
+
+// Router to push user once SignedUp to Log In
+const redirect = useRouter();
+
 // Arrow function to Signin user to supaBase
 const signIn = async () => {
-  try {} catch (error) {}
+  try {
+    await useUserStore().signIn(email.value, password.value);
+    redirect.push({ path: "/" });
+  } catch (error) {
+    errorMsg.value = error.message;
+    setTimeout(() => {
+      errorMsg.value = null;
+    }, 5000);
+  }
+  return;
+  errorMsg.value = "error";
 };
 </script>
 
