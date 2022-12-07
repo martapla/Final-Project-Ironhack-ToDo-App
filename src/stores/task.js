@@ -28,10 +28,25 @@ export const useTaskStore = defineStore("tasks", {
       ]);
     },
 
+    //Comunicar a base de datos
+
     async deleteTask(id){
-      const { data, error } = await supabase.from("tasks").delete().match({
-        id: id,
-      });
+      const { data, error } = await supabase
+        .from("tasks")
+        .delete()
+        .match({
+           id: id,
+        });
+    },
+
+    async changeTask(title, description, id) {
+      console.log(useUserStore().user.id);
+      const { data, error } = await supabase
+        .from("tasks")
+        .update({ title: title, description: description })
+        .match({
+          id: id,
+        });
     },
 
    

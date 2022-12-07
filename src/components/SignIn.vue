@@ -2,44 +2,45 @@
  
   <template>
 
-  <div class="container">
-    <h3 class="header-title">Log In to ToDo App</h3>
-    <p class="header-subtitle">
-      <!-- Estamos en la ruta de login. Aquí deberíais crear un form con la lógica correspondiente para que este permita al usuario loguearse con su email y su contraseña. Miraros la lógica de SignUp si necesitáis inspiración :) -->
-    </p>
+  <div class="main-container">
+    <div class="container-form">
+        <h3 class="header-title">Log In to ToDo App</h3>
+        <p class="header-subtitle">
+          <!-- Estamos en la ruta de login. Aquí deberíais crear un form con la lógica correspondiente para que este permita al usuario loguearse con su email y su contraseña. Miraros la lógica de SignUp si necesitáis inspiración :) -->
+        </p>
 
-    <form @submit.prevent="signIn" class="form-sign-in">
-      <div class="form">
-          <div class="form-input">
-            <label class="input-field-label">E-mail</label>
-            <input
-              type="email"
-              class="input-field"
-              placeholder="example@gmail.com"
-              id="email"
-              v-model="email"
-              required
-            />
-          </div>
-          <div class="form-input">
-            <label class="input-field-label">Password</label>
-            <input
-              type="password"
-              class="input-field"
-              placeholder="**********"
-              id="password"
-              v-model="password"
-              required
-            />
-          </div>
+        <form @submit.prevent="signIn" class="form-sign-in">
+          <div class="form">
+              <div class="form-input">
+                <label class="input-field-label">E-mail</label><br/>
+                <input
+                  type="email"
+                  class="input-field"
+                  placeholder="example@gmail.com"
+                  id="email"
+                  v-model="email"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <label class="input-field-label">Password</label><br/>
+                <input
+                  type="password"
+                  class="input-field"
+                  placeholder="**********"
+                  id="password"
+                  v-model="password"
+                  required
+                />
+              </div>
 
-          <button class="button" type="submit">Sign In</button>
-          <p>Dont have an account? 
-            <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/>
-          </p>
-        </div>  
-      </form>
-
+              <button class="button" type="submit">Sign In</button>
+              <p>Dont have an account? 
+                <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/>
+              </p>
+            </div>  
+          </form>
+    </div>
       <div v-show="errorMsg">{{errorMsg}}</div>
   </div>
 
