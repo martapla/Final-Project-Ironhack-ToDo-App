@@ -1,3 +1,19 @@
+## Project Journal:
+
+### 5/12/2022:
+* Read Documentation.
+* Start some Css at Sign In, Sign Up.
+
+### 6/12/2022:
+* Create Sign Up, Sign In and Sign Out.
+* Start AddTasks.
+
+### 7/12/2022:
+* Implememt the logic of: AddTask-DeleteTask-ChangeTask.
+* Start Css.
+
+------------------
+
 # [](https://github.com/zantonz/final-project/blob/master/README.md)ToDo App
 
 [Click para acceder a la web](https://todo-zantonz.vercel.app/)
@@ -58,13 +74,5 @@ __El objetivo__ de este proyecto es poner en practica los conocimientos de Vue.j
 * Implementar funcionalidad del Timer
 
 
-## Project Journal:
 
-### 5/12/2022:
-* Read Documentation.
-* Start some Css at Sign In, Sign Up.
-
-### 6/12/2022:
-* Create Sign Up, Sign In and Sign Out.
-* Start AddTasks.
 
