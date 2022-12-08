@@ -9,8 +9,12 @@
 * Start AddTasks.
 
 ### 7/12/2022:
-* Implememt the logic of: AddTask-DeleteTask-ChangeTask.
+* Implement the logic of: AddTask-DeleteTask-ChangeTask.
 * Start Css.
+
+### 8/12/2022:
+* Implement the logic of: Completed Task.
+* Css in SignIn - SignUp.
 
 ------------------
 
