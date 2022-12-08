@@ -1,15 +1,15 @@
 <template>
-  <div class="container">
+  <div class="main-container">
 
     <div class="header">
       <div class="header-description">
-        <h3 class="header-title">Register to ToDo App</h3>
-        <p class="header-subtitle">Start organizing your tasks!</p>
+        <h3 class="header-title">Register here!</h3>
+        
       </div>
     </div>
 
-    <form @submit.prevent="signUp" class="form-sign-in">
-      <div class="form">
+    <form @submit.prevent="signUp" class="form-sign-up">
+      <div class="form-sign">
         <div class="form-input">
           <label class="input-field-label">E-mail</label>
           <input
@@ -42,16 +42,19 @@
             v-model="confirmPassword"
             required
           />
+       
+           <button class="button" type="submit">Sign Up</button>
         </div>
-        <button class="button" type="submit">Sign Up</button>
-        <p>
-          Have an account?
-          <PersonalRouter
+        <div class="account-box">
+            <p class="text-signup"> Have an account?
+            <PersonalRouter
             :route="route"
             :buttonText="buttonText"
             class="sign-up-link"
-          />
-        </p>
+             />
+            </p>
+        </div>
+      
       </div>
     </form>
 

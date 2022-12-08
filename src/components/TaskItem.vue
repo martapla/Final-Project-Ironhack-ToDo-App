@@ -1,15 +1,21 @@
 <template>
 <div class="container">
-    <h3>{{task.title}}</h3>
-    <p>{{task.description}}</p>
-    <button @click="deleteTask">Delete {{task.title}}</button>
+    <h3 v-bind:class="task.is_complete ? 'completed' : 'not-completed'">
+      {{ task.title }}
+    </h3>
+    <p v-bind:class="task.is_complete ? 'completed' : 'not-completed'">
+      {{ task.description }}
+    </p>
+   <button @click="deleteTask">Delete {{task.title}}</button>
 </div>
-<button @click="changeBooleanFunction">edit</button>
-<div v-show="changeBoolean">
+
+<button @click="editTaskFunction">Edit</button>
+<div v-show="editTask">
     <input type="text" placeholder="Change Title" v-model="name"/>
     <input type="text" placeholder="Change Description" v-model="description" />
     <button @click="changeTask">Save</button>
 </div>
+<button @click="statusTask">Done!</button>
 </template>
 
 <script setup>
@@ -25,24 +31,39 @@ const props = defineProps({
     task: Object,
 });
 // Función para borrar la tarea a través de la store. El problema que tendremos aquí (y en NewTask.vue) es que cuando modifiquemos la base de datos los cambios no se verán reflejados en el v-for de Home.vue porque no estamos modificando la variable tasks guardada en Home. Usad el emit para cambiar esto y evitar ningún page refresh.
+
 const deleteTask = async() => {
     await taskStore.deleteTask(props.task.id);
-    emit ("getTasksHijo")
-};
-// Function para cambiar task
-const changeTask = async () => {
-    await taskStore.changeTask(name.value, description.value, props.task.id);
-    changeBoolean.value = false;
     emit("getTasksHijo");
 };
-const changeBoolean = ref(false);
-const changeBooleanFunction = () => {
-    changeBoolean.value = !changeBoolean.value;
+// Function para cambiar Task.
+const changeTask = async () => {
+    await taskStore.changeTask(name.value, description.value, props.task.id);
+    editTask.value = false;
+    emit("getTasksHijo");
+};
+const editTask = ref(false);
+const editTaskFunction = () => {
+    editTask.value = !editTask.value;
+};
+
+//Function para marcar Complete - InComplete.
+const statusTask = async () => {
+    await taskStore.statusTask(!props.task.is_complete, props.task.id);
+    emit("getTasksHijo");
+    console.log("el boleano es:" + props.task.is_complete)
+    
 };
 
 </script>
 
-<style></style>
+<style>
+
+.completed {
+  text-decoration: line-through;
+  color: grey;
+}
+</style>
 
 <!--
 **Hints**

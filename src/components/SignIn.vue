@@ -3,16 +3,17 @@
   <template>
 
   <div class="main-container">
-    <div class="container-form">
-        <h3 class="header-title">Log In to ToDo App</h3>
+    <div class="header">
+        <h3 class="header-title">My To do List</h3>
         <p class="header-subtitle">
-          <!-- Estamos en la ruta de login. Aquí deberíais crear un form con la lógica correspondiente para que este permita al usuario loguearse con su email y su contraseña. Miraros la lógica de SignUp si necesitáis inspiración :) -->
+          Let's Organize your Daily Tasks !
         </p>
+    </div>    
 
         <form @submit.prevent="signIn" class="form-sign-in">
-          <div class="form">
+          <div class="form-sign">
               <div class="form-input">
-                <label class="input-field-label">E-mail</label><br/>
+                <label class="input-field-label">E-mail</label>
                 <input
                   type="email"
                   class="input-field"
@@ -23,24 +24,28 @@
                 />
               </div>
               <div class="form-input">
-                <label class="input-field-label">Password</label><br/>
-                <input
-                  type="password"
-                  class="input-field"
-                  placeholder="**********"
-                  id="password"
-                  v-model="password"
-                  required
-                />
+                  <label class="input-field-label">Password</label>
+                  <input
+                    type="password"
+                    class="input-field"
+                    placeholder="**********"
+                    id="password"
+                    v-model="password"
+                    required
+                  />
+              
+
+                  <button class="button" type="submit">Sign In</button>
               </div>
 
-              <button class="button" type="submit">Sign In</button>
-              <p>Dont have an account? 
-                <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/>
-              </p>
-            </div>  
-          </form>
-    </div>
+              <div class="account-box">
+                  <p class="text-signup">Dont have an account? 
+                    <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/>
+                  </p>
+              </div>
+          </div>  
+        </form>
+   
       <div v-show="errorMsg">{{errorMsg}}</div>
   </div>
 
