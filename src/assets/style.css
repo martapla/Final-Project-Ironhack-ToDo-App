@@ -18,6 +18,8 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+/* -------------- SignUp -SignIn Component -------------*/
+
 .main-container {
    background-image: url(https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
 
@@ -43,10 +45,9 @@
 .header-title {
     margin-bottom: 20px;
     font-size: 35px;
-    color:#0a8aab;
+    color:#2ca4c2;
     margin-bottom: 50px;
 }
-
 
 .header-subtitle {
    color:#f5d4cd;
@@ -107,8 +108,7 @@
      display: flex;
      flex-direction: column;
      align-items: center;
-     /* margin-bottom: 100px; */
- }
+}
 
 .button {
     width:80px;
@@ -122,20 +122,19 @@
     margin-top:30px;
     background-color:#B3DBE5;
     color:#0a8aab;
-  
 }
+
 .account-box {
     height: 100px;
     display: flex;
     align-items: flex-end;
     margin-top: 30px;
- 
 }
+
 .text-signup  {
     font-size: 20px;
     font-weight:bold;
     margin-bottom: 20px;
-
 }
 
 .sign-up-link {
@@ -149,6 +148,28 @@
     margin-top: 10px;
     color:#58B0C6;
 }
+
+/* MediaQueries */
+@media screen and (min-width: 769px) {
+
+.header {
+    height: 200px;
+} 
+
+.header-title {
+    margin-bottom: 20px;
+    font-size: 70px;
+    color:#2ca4c2;
+    margin-bottom: 50px;
+}
+
+.header-subtitle {
+   color:#f5d4cd;
+   font-size: 38px;
+   font-weight: bold;
+}
+}
+
 
 
 /* h1 {
