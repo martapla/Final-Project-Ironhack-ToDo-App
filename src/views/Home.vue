@@ -3,13 +3,15 @@
     <Nav />
 
     <div class="content"> 
-      <h3>Your account:</h3>
-      <router-link to="/account">Account</router-link>
+      <!-- <h3>Your account:</h3>
+      <router-link to="/account" class="link-router">Account</router-link> -->
     </div>
+
     <NewTask @getTasksHijo="getTasks" />
-    <h1>Tasks:</h1>
+    <h1 class="title-tasks">Tasks:</h1>
     <TaskItem v-for="task in tasks" :key="task.id" :task="task" @getTasksHijo="getTasks" />
   </div>
+
 </template>
 
 <script setup>

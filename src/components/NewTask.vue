@@ -1,16 +1,18 @@
 <template>
-    <h1>Add a new Task</h1>
-    <div v-if="showErrorMessage">
-        <p class="error-text">{{ errorMessage }}</p>
-    </div>
-    <div>
-        <div class="input-field">
-            <input type="text" placeholder="Add a Task Title - Listen to Kendrick Lamar" v-model="name">
+    <div class="container-newtask">
+        <h1 class="title-newtask">Add a New Task</h1>
+        <div v-if="showErrorMessage">
+            <p class="error-text">{{ errorMessage }}</p>
         </div>
-        <div class="input-field">
-            <input type="text" placeholder="Add a Task Description - Look up Kendrick Lamar's FEAR album on spotify and listen to the whole album." v-model="description">
+        <div class="newtask-box">
+            <!-- <div class="input-newtask"> -->
+                <input type="text" placeholder="Add a Task Title" class="input-newtask" v-model="name">
+            <!-- </div> -->
+            <!-- <div class="input-newtask-description"> -->
+                <input type="text" placeholder="Add a Task Description" class="input-newtask-description" v-model="description">
+            <!-- </div> -->
+            <button @click="addTask" class="button-add">Add</button>
         </div>
-        <button @click="addTask" class="button">Add</button>
     </div>
 </template>
 
@@ -21,7 +23,7 @@ import { useTaskStore } from "../stores/task"
 const taskStore = useTaskStore();
 const emit = defineEmits(["getTasksHijo"]);
 
-// variables para los valors de los inputs
+// variables para los valores de los inputs
 const name = ref('');
 const description = ref('');
 

@@ -1,21 +1,21 @@
 <template>
-<div class="container">
-    <h3 v-bind:class="task.is_complete ? 'completed' : 'not-completed'">
-      {{ task.title }}
-    </h3>
-    <p v-bind:class="task.is_complete ? 'completed' : 'not-completed'">
-      {{ task.description }}
-    </p>
-   <button @click="deleteTask">Delete {{task.title}}</button>
-</div>
+<div class="container-tasklist">
+    <h3 v-bind:class="task.is_complete ? 'completed' : 'not-completed'">{{ task.title }}</h3>
+    <p v-bind:class="task.is_complete ? 'completed' : 'not-completed'">{{ task.description }}</p>
 
-<button @click="editTaskFunction">Edit</button>
-<div v-show="editTask">
-    <input type="text" placeholder="Change Title" v-model="name"/>
-    <input type="text" placeholder="Change Description" v-model="description" />
-    <button @click="changeTask">Save</button>
+    <div class="task-btn">
+        <button @click="deleteTask" class="delete-btn">Delete</button>
+        <button @click="editTaskFunction" class="edit-btn">Edit</button>
+        <button @click="statusTask" class="status-btn">Done!</button>
+    </div>
+
+    <div v-show="editTask" class="task-edit">
+        <input type="text" class="input-task" placeholder="Change Title" v-model="name"/>
+        <input type="text" class="input-task" placeholder="Change Description" v-model="description" />
+
+        <button @click="changeTask" class="save-btn">Save</button>
+    </div>
 </div>
-<button @click="statusTask">Done!</button>
 </template>
 
 <script setup>
