@@ -14,7 +14,11 @@
 
 ### 8/12/2022:
 * Implement the logic of: Completed Task.
-* Css in SignIn - SignUp.
+* SignIn, SignUp CSS.
+
+### 9/12/2022:
+* MediaQueries in SignIn, SignUp.
+* Home: Navbar, NewTask CSS.
 
 ------------------
 
