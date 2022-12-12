@@ -37,6 +37,9 @@
     <div class="burger-list">
       <ul class="mobile-links">
         <li>
+          <router-link to="/" class="link-router">Home</router-link>
+        </li>
+        <li>
           <router-link to="/" class="link-router">Tasks </router-link>
         </li>
 

@@ -21,13 +21,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
-    overflow: hidden;
+   
     
 }
 
 body {
     width:100vw;
-    /* height:100vh; */
+    height:100vh;
     /* overflow: hidden; */
 }
 
@@ -218,7 +218,7 @@ body {
   }
   
   nav {
-    background-color: #f5d4cd;
+    /* background-color: #f5d4cd; */
     display: flex;
     width: 100%;
     height:100px ;
@@ -226,6 +226,8 @@ body {
     align-items: center;
     font-size:20px;
   }
+
+  
   
    .nav-links  {
     list-style: none;
@@ -254,7 +256,7 @@ body {
   }
 
   .button-logout {
-    width:120px;
+    width:100px;
     align-content: center;
     border-radius: 10px;
     border:none;
@@ -280,6 +282,9 @@ body {
   .hamburger {
     display: block;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top:15px;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -296,43 +301,41 @@ body {
 
   .burger-list{
     position: absolute;
-      left: 390px;
-      top: 100px;
+      left: -10px;
+      top: 0px;
       overflow: hidden;
-      width: 300px;
-      height: 300px;
+      width: 160px;
+      height: 190px;
+      border-radius: 0px 0px 10px 0px;
   }
 
   .mobile-links {
-      display: flex;
-      position: absolute;
-      flex-direction: column;
-      transition: all 1s linear;
-      top: -100vh;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    transition: all 1s linear;
+    top: -100vh;
+    align-items: center;
+    justify-content: space-around;
+    height: 220px;
+    width: 150px;
+    list-style: none;
+    background:#f5d4cd;
+    border-radius: 0px 0px 20px 0px;
 }
 
 .mobile-links.show-active{
-    left: 0px;
+    left: 10px;
     top: 0px;
 }
-
-  /* .mobile-links.link-active {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 40px;
-    height: 50px;
-    align-items: center;
-  } */
-
 
 /* ---------------------  MediaQuery - NavBar ----------------------- */
 @media screen and (min-width: 768px){
     .desktop{
         display: block;
         width: 100vw;
-        /* background-color: aqua; */
     }
+
     .mobile{
         display:none;
     }
@@ -345,14 +348,12 @@ body {
         display: none;
     }
 
-    /* .nav-links  {
-        display: block;
-      } */
+    nav {
+        background-color: #f5d4cd;
+       
+      }
 
 }
-
-
-
 
 /* ------------------------ New Task -------------------------- */
 
