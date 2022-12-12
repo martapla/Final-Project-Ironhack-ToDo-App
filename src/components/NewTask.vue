@@ -1,14 +1,13 @@
 <template>
     <div class="container-newtask">
-        <h1 class="title-newtask">Add a New Task</h1>
+        <h1 class="title-newtask">Add a New Task!</h1>
         <div v-if="showErrorMessage">
             <p class="error-text">{{ errorMessage }}</p>
         </div>
         <div class="newtask-box">
             <!-- <div class="input-newtask"> -->
                 <input type="text" placeholder="Add a Task Title" class="input-newtask" v-model="name">
-            <!-- </div> -->
-            <!-- <div class="input-newtask-description"> -->
+           
                 <input type="text" placeholder="Add a Task Description" class="input-newtask-description" v-model="description">
             <!-- </div> -->
             <button @click="addTask" class="button-add">Add</button>

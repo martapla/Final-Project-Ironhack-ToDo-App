@@ -3,15 +3,17 @@
     <h3 v-bind:class="task.is_complete ? 'completed' : 'not-completed'">{{ task.title }}</h3>
     <p v-bind:class="task.is_complete ? 'completed' : 'not-completed'">{{ task.description }}</p>
 
+    <!---- Buttons ---->
     <div class="task-btn">
         <button @click="deleteTask" class="delete-btn">Delete</button>
         <button @click="editTaskFunction" class="edit-btn">Edit</button>
         <button @click="statusTask" class="status-btn">Done!</button>
     </div>
 
+    <!---- Edit Input Tasks ---->
     <div v-show="editTask" class="task-edit">
-        <input type="text" class="input-task" placeholder="Change Title" v-model="name"/>
-        <input type="text" class="input-task" placeholder="Change Description" v-model="description" />
+        <input type="text" class="input-task" placeholder="Title" v-model="name"/>
+        <input type="text" class="input-task" placeholder="Description" v-model="description" />
 
         <button @click="changeTask" class="save-btn">Save</button>
     </div>
@@ -36,7 +38,9 @@ const deleteTask = async() => {
     await taskStore.deleteTask(props.task.id);
     emit("getTasksHijo");
 };
-// Function para cambiar Task.
+
+// ------- Function para cambiar Task --------- //
+
 const changeTask = async () => {
     await taskStore.changeTask(name.value, description.value, props.task.id);
     editTask.value = false;
@@ -47,7 +51,8 @@ const editTaskFunction = () => {
     editTask.value = !editTask.value;
 };
 
-//Function para marcar Complete - InComplete.
+//------------ Function para marcar Complete - InComplete ------- //
+
 const statusTask = async () => {
     await taskStore.statusTask(!props.task.is_complete, props.task.id);
     emit("getTasksHijo");
@@ -57,13 +62,7 @@ const statusTask = async () => {
 
 </script>
 
-<style>
-
-.completed {
-  text-decoration: line-through;
-  color: grey;
-}
-</style>
+<style></style>
 
 <!--
 **Hints**

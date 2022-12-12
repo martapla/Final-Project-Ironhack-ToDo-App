@@ -1,15 +1,20 @@
 <template>
   <div class="wrapper">
-    <Nav />
+     <Nav />
 
-    <div class="content"> 
-      <!-- <h3>Your account:</h3>
-      <router-link to="/account" class="link-router">Account</router-link> -->
-    </div>
+     <!-- <div class="content"> 
+       <h3>Your account:</h3>
+       <router-link to="/account" class="link-router">Account</router-link> 
+     </div> -->
 
-    <NewTask @getTasksHijo="getTasks" />
-    <h1 class="title-tasks">Tasks:</h1>
-    <TaskItem v-for="task in tasks" :key="task.id" :task="task" @getTasksHijo="getTasks" />
+     <NewTask @getTasksHijo="getTasks" />
+
+     <h1 class="title-tasks">Tasks:</h1>
+     <div class="tasks-boxes">
+        <TaskItem v-for="task in tasks" :key="task.id" :task="task" @getTasksHijo="getTasks" />
+     </div>
+
+     <Footer />
   </div>
 
 </template>
@@ -21,6 +26,7 @@ import { useRouter } from 'vue-router';
 import Nav from '../components/Nav.vue';
 import NewTask from '../components/NewTask.vue';
 import TaskItem from '../components/TaskItem.vue';
+import Footer from '../components/Footer.vue';
 
 const taskStore = useTaskStore();
 
