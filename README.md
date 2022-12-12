@@ -20,6 +20,10 @@
 * MediaQueries in SignIn, SignUp.
 * Home: Navbar, NewTask CSS.
 
+### 12/12/2022:
+* Responsive Hambuguer Navbar.
+* Footer and Home Css.
+
 ------------------
 
 
