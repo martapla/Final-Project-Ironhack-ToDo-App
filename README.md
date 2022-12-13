@@ -24,6 +24,10 @@
 * Responsive Hambuguer Navbar.
 * Footer and Home Css.
 
+### 13/12/2022:
+* Account View.
+* Css colors and details.
+
 ------------------
 
 
