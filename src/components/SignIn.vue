@@ -4,23 +4,23 @@
 
   <div class="main-container">
     <div class="header">
-        <h3 class="header-title">My To do List</h3>
+        <h3 class="header-title">My To-do List</h3>
         <p class="header-subtitle">
           Let's Organize your Daily Tasks !
         </p>
     </div>    
 
-        <form @submit.prevent="signIn" class="form-sign-in">
+      <form @submit.prevent="signIn" class="form-sign-in">
           <div class="form-sign">
               <div class="form-input">
-                <label class="input-field-label">E-mail</label>
-                <input
-                  type="email"
-                  class="input-field"
-                  placeholder="example@gmail.com"
-                  id="email"
-                  v-model="email"
-                  required
+                  <label class="input-field-label">E-mail</label>
+                  <input
+                    type="email"
+                    class="input-field"
+                    placeholder="example@gmail.com"
+                    id="email"
+                    v-model="email"
+                    required
                 />
               </div>
               <div class="form-input">
@@ -35,7 +35,7 @@
                   />
               
 
-                  <button class="button" type="submit">Sign In</button>
+                <button class="button" type="submit">Sign In</button>
               </div>
 
               <div class="account-box">
@@ -44,7 +44,7 @@
                   </p>
               </div>
           </div>  
-        </form>
+      </form>
    
       <div v-show="errorMsg">{{errorMsg}}</div>
   </div>

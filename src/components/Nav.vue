@@ -6,7 +6,7 @@
         <li>
           <router-link to="/" class="link-router">Home</router-link>
         </li>
-        <li class="links">
+        <li>
           <router-link to="/" class="link-router">Tasks</router-link>
         </li>
 

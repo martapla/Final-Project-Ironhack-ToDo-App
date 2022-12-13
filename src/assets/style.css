@@ -1,28 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
-/* :root {
-    --colorWhite: #ffffff;
+:root {
+    --colorNude: #F9BEB2;
     --colorMelon: #FAAD9E;
-    --colorRed: red;
-    --fontSize-sm: 16px;
-    --fontFamily: 'Titillium Web', sans-serif;
-    --fontTitle: 'Arial';
-    --fontBody: 'Helvetica'; 
-} */
+    --colorLavanda: #81A2EF;
+    --colorGreen: #B3DBE5;
+    --colorBlue: #2BAEDE;
+    --colorAero: #87b9de;
+    --colorAlmond: #ffebcd;
+
+}
+
+
   /* h1 {
     color: var(--colorRed);
 } */
 
-/* Account View */
-
 
 * { 
-    border:solid 1px rgb(255, 127, 225); 
+    /* border:solid 1px rgb(255, 127, 225);  */
     margin:0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
-   
-    
 }
 
 body {
@@ -35,22 +34,11 @@ body {
     position:relative;
 }
 
-.desktop{
-    display:none;
-}
-
-.mobile{
-    width: 100vw;
-    background-color: purple;
-}
-
 
 /* -------------- SignUp -SignIn Component -------------*/
 
 .main-container {
    background-image: url(https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
-
-   /* background-image: url(https://i.pinimg.com/236x/4c/9d/6c/4c9d6c1f03dfc41497e57f203e0b9771.jpg); */
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,7 +49,6 @@ body {
     justify-content: space-evenly;
     height: 100vh;
     width: 100vw;
-    background-color: #FAAD9E;
 } 
 .header {
     height: 100px;
@@ -73,13 +60,13 @@ body {
 .header-title {
     margin-bottom: 20px;
     font-size: 40px;
-    color:#2ca4c2;
+    color: var(--colorBlue);
     margin-bottom: 50px;
 }
 
 .header-subtitle {
-   color:#f5d4cd;
-   font-size: 18px;
+   color: var(--colorGreen);
+   font-size: 25px;
    font-weight: bold;
 }
 
@@ -97,13 +84,13 @@ body {
     margin-bottom: 5px;
     font-size: 20px;
 }
-
+ /* Mirar color Sign In no agafa Almond */
 .input-field {
     border-radius: 10px;
     border:none;
     text-align: center;
     padding: 10px;
-    background-color: blanchedalmond;
+    background-color:var(--colorAlmond);
 }
 
 .form-sign {
@@ -177,7 +164,8 @@ body {
     color:#58B0C6;
 }
 
-/* MediaQueries ---- SignIn-SignUp ----------*/
+/* MediaQueries ---- SignIn-SignUp Components ----------*/
+/* Media Query for Tablets and Desktop */
 
 @media screen and (min-width: 768px) {
 .header {
@@ -200,25 +188,17 @@ body {
 
  /* -------------------  HOME VIEW  -----------------------*/ 
 
-/* ----------------- Navbar view ---------------------*/
+/* ----------------- Navbar Component ---------------------*/
 
 .wrapper {
-    /* background-image: url(https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80); */
-    /* background-repeat: no-repeat; */
-    /* background-size: contain; */
-    /* background-attachment: fixed; */
-    /* height: 100%; */
-    /* width: 100%; */
-
-    background-color: #B3DBE5;
+   background-color: #B3DBE5;
 }
 
 .navbar-img {
     width: 90px;
-  }
+}
   
-  nav {
-    /* background-color: #f5d4cd; */
+nav {
     display: flex;
     width: 100%;
     height:100px ;
@@ -227,9 +207,7 @@ body {
     font-size:20px;
   }
 
-  
-  
-   .nav-links  {
+.nav-links  {
     list-style: none;
     text-decoration: none;
     display: flex;
@@ -238,9 +216,8 @@ body {
     gap:50px;
     align-items: center;
     margin-top: 30px;
- 
-  }
-    .log-out-welcome {
+}
+.log-out-welcome {
     list-style: none;
     text-decoration: none;
     display: flex;
@@ -248,14 +225,14 @@ body {
     justify-content:space-between;
     align-items: center;
     margin:0px 30px 10px 30px;
-  }
+}
 
-  .link-router , .welcome  {
+.link-router , .welcome  {
     text-decoration: none;
     color:#0a8aab;
-  }
+}
 
-  .button-logout {
+.button-logout {
     width:100px;
     align-content: center;
     border-radius: 10px;
@@ -277,39 +254,39 @@ body {
     -webkit-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
     background-color: #464756;
-  }
+}
 
-  .hamburger {
+.hamburger {
     display: block;
     cursor: pointer;
     position: absolute;
     right: 20px;
     top:15px;
-  }
+}
 
-  .hamburger.active .bar:nth-child(2) {
+.hamburger.active .bar:nth-child(2) {
     opacity: 0;
-  }
+}
 
-  .hamburger.active .bar:nth-child(1) {
+.hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-  }
+}
 
-  .hamburger.active .bar:nth-child(3) {
+.hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  }
+}
 
-  .burger-list{
+.burger-list{
     position: absolute;
-      left: -10px;
-      top: 0px;
-      overflow: hidden;
-      width: 160px;
-      height: 190px;
-      border-radius: 0px 0px 10px 0px;
-  }
+    left: -10px;
+    top: 0px;
+    overflow: hidden;
+    width: 160px;
+    height: 190px;
+    border-radius: 0px 0px 10px 0px;
+}
 
-  .mobile-links {
+.mobile-links {
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -329,33 +306,43 @@ body {
     top: 0px;
 }
 
-/* ---------------------  MediaQuery - NavBar ----------------------- */
-@media screen and (min-width: 768px){
-    .desktop{
-        display: block;
-        width: 100vw;
-    }
+.desktop {
+    display:none;
+}
 
-    .mobile{
-        display:none;
-    }
+.mobile {
+    width: 100vw;
+}
 
-    .hamburger {
-        display: none;
-    }
 
-    .mobile-links {
-        display: none;
-    }
-
-    nav {
-        background-color: #f5d4cd;
-       
-      }
+/* ---------------------  MediaQuery - NavBar Component ----------------------- */
+/* Media Query for Tablets and Desktop */
+@media screen and (min-width: 768px){ 
+    
+.desktop {
+    display: block;
+    width: 100vw;
+}
+ 
+.mobile {
+    display:none;
+}
+ 
+.hamburger {
+    display: none;
+}
+ 
+.mobile-links {
+    display: none;
+}
+ 
+nav {
+    background-color: #f5d4cd;
+ }
 
 }
 
-/* ------------------------ New Task -------------------------- */
+/* ------------------------ New Task Component -------------------------- */
 
 .container-newtask {
     display: flex;
@@ -392,7 +379,6 @@ body {
     font-size: 15px;
     margin: 20px 0px 20px 0px;
     border-color:transparent;
-    
 }
 
 .input-newtask-description {
@@ -419,15 +405,25 @@ body {
     margin-bottom: 10px;
 }
 
-/* ---------------Component: TASK ITEM ------------------ */
+/* -------------Task Item Component------------------ */
 
-/* .title-tasks {
-    color:#2ca4c2;
-    margin-left: 50px;
-    margin:10px 0px 0px 50px;
-} */
+.title-tasks {
+    color:var( --colorLavanda);
+    text-align:center;
+    font-weight: 600;
+    text-decoration:underline;
+
+}
+
+.title-newtask {
+    color:var(--colorBlue);
+    text-align: center;
+    margin-top: 0px;
+    font-weight: 600;
+}
 
 .container-tasklist {
+    background-image:url(https://i.pinimg.com/564x/49/11/0f/49110f0b15b48c68271f6afd255f4480.jpg);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -443,11 +439,6 @@ body {
 .completed {
     text-decoration: line-through;
     color:rgb(93, 105, 111);
-  }
-
-h1 {
-    color:#2ca4c2; 
-    text-align: center;
 }
 
 .task-edit {
@@ -460,7 +451,6 @@ h1 {
 .input-task {
     width:60px;
     height:180%;
-    
 }
 
 .task-btn {
@@ -477,46 +467,87 @@ h1 {
     background-color: #f5d4cd;
     border-color:transparent;
     font-weight:500;
-
 }
 
 /* --------- MediaQuery Task Item ---------*/
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px){
-    .container-tasklist {
-        width: 310px;  
-        height: 150px; 
-        margin:30px;
-    }
+.container-tasklist {
+    width: 310px;  
+    height: 150px; 
+    margin:30px;
+}
+
+.title-newtask {
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 40px;
+}
     
-    .tasks-boxes {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        justify-items: center;
-        align-items: center;
-    }
+.tasks-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+}
 
-    h1 {
-        text-align:left; 
-        margin:10px 0px 0px 50px;
-    }
- 
- }
- /* Media Query for Laptops and Desktops */
+ /* --- Media Query for Laptops and Desktops ---*/
  @media (min-width: 1025px) {
-    .tasks-boxes {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+.tasks-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
        
-    }
+}
+}
 
- }
+
+ /* --------------  Footer Component ---------------*/
+
+.footer {
+    font-size: 12px;
+    text-align: center;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    margin:0px;
+}
 
 
- /* ----------  Footer  ---------------*/
+ /* -----------------  ACCOUNT VIEW  -----------------*/
 
- .footer {
-    font-size: 18px;
- }
+img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.container-account {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.account-details {
+    display: flex;
+    align-items: center;
+    gap:10px;
+    color:#2ca4c2;
+}
+
+/* --------- Media Query Account Mobile -----------*/
+@media screen and (max-width: 721px){
+img {
+    width: 100px;
+}
+
+.container-account {
+    margin-top: 100px;
+}
+
+.account-details {
+    flex-direction: column;
+}
+  }
