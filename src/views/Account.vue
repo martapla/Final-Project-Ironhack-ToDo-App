@@ -69,17 +69,17 @@
   const email = ref("");
 
 
-  onMounted(() => {
-    getProfile();
-  });
 
-  async function getProfile() {
+
+
+async function getProfile() {
     await userStore.fetchUser();
+    console.log(userStore.profile);
     username.value = userStore.profile.username;
     email.value = userStore.profile.email;
     avatar_url.value = userStore.profile.avatar_url;
-   
 }
+getProfile();
 
   async function updateProfile() {
     try {

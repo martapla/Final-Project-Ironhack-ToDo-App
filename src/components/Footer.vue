@@ -1,5 +1,8 @@
 <template>
-  <h1 class="footer"> IronHack Final Project <br/>To-Do List made by Marta P.</h1>
+  <footer>
+     <h1 class="title-footer"> IronHack Final Project </h1>
+     <p>🎠 Made by Marta Planella </p>
+   </footer>
 </template>
 
 <script setup>

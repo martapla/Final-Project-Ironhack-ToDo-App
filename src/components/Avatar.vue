@@ -11,11 +11,12 @@ const files = ref();
 
 const downloadImage = async () => {
   try {
-    const { data, error } = await supabase.storage
-      .from("images")
-      .download(path.value);
+      const { data, error } = await supabase
+          .from("profiles")
+          .select("avatar_url")
+          .match({user_id: 1})
     if (error) throw error;
-    src.value = URL.createObjectURL(data);
+    src.value = data[0];
   } catch (error) {
     console.error("Error downloading image: ", error.message);
   }

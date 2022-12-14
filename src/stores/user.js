@@ -12,12 +12,12 @@ export const useUserStore = defineStore("user", {
         this.user = user;
         const { data: profile } = await supabase
         .from('profiles')
-        .select()
+        .select('*')
         .match({ user_id: this.user.id })
 
         if (profile) this.profile = profile[0];
-       // console.log('user in store: ', this.user);
-       // console.log('profile in store: ', this.profile);
+       //console.log('user in store: ', this.user);
+       console.log('profile in store: ', this.profile);
       }
     },
 

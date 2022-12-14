@@ -18,9 +18,9 @@
     <div>
       <ul class="log-out-welcome">
         <li >
-          <p v-if="getUser">Welcome: {{ getUser.email }}</p>
-          <!-- Also this way:
-          <p class="welcome">Welcome! {{useUserStore().user.email}} </p> -->
+          <!-- <p v-if="getUser">Welcome: {{ getUser.email }}</p> -->
+          
+          <p class="welcome">Welcome! {{useUserStore().user.username}} </p>
         </li>
         <li>
           <button @click="signOut" class="button-logout">Log out</button>

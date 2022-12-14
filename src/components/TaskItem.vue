@@ -4,7 +4,7 @@
     <p v-bind:class="task.is_complete ? 'completed' : 'not-completed'">{{ task.description }}</p>
 
     <!---- Buttons ---->
-    <div class="task-btn">
+    <div class="tasks-btn">
         <button @click="deleteTask" class="delete-btn">Delete</button>
         <button @click="editTaskFunction" class="edit-btn">Edit</button>
         <button @click="statusTask" class="status-btn">Done!</button>
@@ -12,8 +12,8 @@
 
     <!---- Edit Input Tasks ---->
     <div v-show="editTask" class="task-edit">
-        <input type="text" class="input-task" placeholder="Title" v-model="name"/>
-        <input type="text" class="input-task" placeholder="Description" v-model="description" />
+        <input type="text" class="input-task" placeholder="New Title" v-model="name"/>
+        <input type="text" class="input-task" placeholder="New Description" v-model="description" />
 
         <button @click="changeTask" class="save-btn">Save</button>
     </div>
