@@ -28,6 +28,10 @@
 * Account View.
 * Css colors and details.
 
+### 14/12/2022:
+* Account Avatar.
+* Css colors and details.
+
 ------------------
 
 
