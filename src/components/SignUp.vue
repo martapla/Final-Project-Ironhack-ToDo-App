@@ -3,7 +3,7 @@
 
     <div class="header">
       <div class="header-description">
-        <h3 class="header-title">Register here!</h3>
+        <h3 class="header-title-up">Register here!</h3>
         
       </div>
     </div>

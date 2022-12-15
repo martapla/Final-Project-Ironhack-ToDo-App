@@ -15,24 +15,15 @@
         </div>
 
         <div class="avatar-img">
-             <Avatar v-model:path="avatar_url" @upload="updateProfile" class="avatar"/>
+             <Avatar v-model:path="avatar_url" @upload="profiles" class="avatar"/>
           </div>   
 
     </div>
-
-  
-    <!-- <img :src="avatar_url ? avatar_url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'" alt="Profile picture" class="avatar-default"> -->
 
     <!-- New Form-->
     <div class="edit-section">
         <h3>You can change your details here:</h3>
         <form class="form-box" @submit.prevent="updateProfile">
-
-           <!-- Image -->  
-          <!-- <div class="avatar-img">
-             <Avatar v-model:path="avatar_url" @upload="updateProfile" class="avatar"/>
-          </div>   -->
-  
           <div class="username-form">
             <label for="new-username">New User Name: </label>
             <input
@@ -68,44 +59,39 @@
   const profile = ref("");
   const email = ref("");
 
-
-
-
-
-async function getProfile() {
+  async function getProfile() {
     await userStore.fetchUser();
     console.log(userStore.profile);
     username.value = userStore.profile.username;
     email.value = userStore.profile.email;
     avatar_url.value = userStore.profile.avatar_url;
 }
-getProfile();
+onMounted(() => {
+    getProfile();
+  });
 
   async function updateProfile() {
     try {
-      // loading.value = true;
-      // const { user } = session.value;
-      console.log("updating profile");
-      const updates = {
+      loading.value = true
+      
+      let { data, error } = await supabase
+        .from('profiles')
+        .update({
         user_id: userStore.user.id,
         username: username.value,
-        avatar_url: avatar_url.value,
-      };
-      let { error } = await supabase
-        .from("profile")
-        .update(updates)
-        .match({ user_id: userStore.user.id });
-         await getProfile();
-         if (error) throw error;
-       }   catch (error) {
-         alert(error.message);
+        avatar_url: avatar_url.value,      
+        })
+        .match({ user_id: useUserStore().user.id })
+
+      if (error) throw error
+       } catch (error) {
+         alert(error.message)
        } finally {
-         // loading.value = false;
+         loading.value = false
        }
-  }
+  } 
 
-
-  async function signOut() {
+ async function signOut() {
     try {
       loading.value = true
       let { error } = await supabase.auth.signOut()

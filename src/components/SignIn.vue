@@ -4,8 +4,8 @@
 
   <div class="main-container">
     <div class="header">
-        <h3 class="header-title">My To-do List</h3>
-        <p class="header-subtitle">
+    <h3 class="header-title-in">My To-do List</h3>
+        <p class="header-subtitle-in">
           Let's Organize your Daily Tasks !
         </p>
     </div>    

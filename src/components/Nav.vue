@@ -18,9 +18,7 @@
     <div>
       <ul class="log-out-welcome">
         <li >
-          <!-- <p v-if="getUser">Welcome: {{ getUser.email }}</p> -->
-          
-          <p class="welcome">Welcome! {{useUserStore().user.username}} </p>
+          <p class="welcome">Welcome {{username}}!</p>
         </li>
         <li>
           <button @click="signOut" class="button-logout">Log out</button>
@@ -70,7 +68,7 @@ const buttonText = "Todo app";
 // constant to save a variable that will get the user from store with a computed function imported from vue
 // const getUser = computed(() => useUserStore().user);
 const getUser = useUserStore().user;
-
+const username = ref("");
 // constant that calls user email from the useUSerStore
 const userEmail = getUser.email;
 
@@ -95,8 +93,15 @@ const signOut = async () => {
   errorMsg.value = "error";
 };
 
+const updateData = async () => {
+  await useUserStore().fetchUser();
+  //Descargamos la cadena vacía
+  username.value = useUserStore().profile.username;
+ }
+updateData();
 
 onMounted(() => { 
+  
    // Hamburguer
   const hamburger = document.querySelector(".hamburger");
    //const navMenu = document.querySelector(".nav-menu");

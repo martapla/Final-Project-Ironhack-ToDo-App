@@ -14,9 +14,12 @@ const downloadImage = async () => {
       const { data, error } = await supabase
           .from("profiles")
           .select("avatar_url")
-          .match({user_id: 1})
+        .match({ id: 1 })
+    console.log(data);
+    console.log(data[0]);
+    console.log(data[0].avatar_url);
     if (error) throw error;
-    src.value = data[0];
+    src.value = data[0].avatar_url;
   } catch (error) {
     console.error("Error downloading image: ", error.message);
   }
@@ -33,8 +36,8 @@ const uploadAvatar = async (evt) => {
     const fileExt = file.name.split(".").pop();
       const filePath = `${Math.random()}.${fileExt}`;
     
-    let { error: uploadError } = await supabase.storage
-      .from("images")
+    let { error: uploadError } = await supabase
+        .from("profiles")
         .upload(filePath, file);
       
     if (uploadError) throw uploadError;
