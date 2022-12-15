@@ -39,7 +39,7 @@
               </div>
 
               <div class="account-box">
-                  <p class="text-signup">Dont have an account? 
+                  <p class="text-signup">Don't have an account? 
                     <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/>
                   </p>
               </div>

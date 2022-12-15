@@ -22,7 +22,7 @@
 
     <!-- New Form-->
     <div class="edit-section">
-        <h3>You can change your details here:</h3>
+        <h3>You can change your name here:</h3>
         <form class="form-box" @submit.prevent="updateProfile">
           <div class="username-form">
             <label for="new-username">New User Name: </label>
