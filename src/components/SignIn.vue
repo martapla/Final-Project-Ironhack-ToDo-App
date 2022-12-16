@@ -21,7 +21,7 @@
                     id="email"
                     v-model="email"
                     required
-                />
+                  />
               </div>
               <div class="form-input">
                   <label class="input-field-label">Password</label>
@@ -35,7 +35,7 @@
                   />
               
 
-                <button class="button" type="submit">Sign In</button>
+                  <button class="button" type="submit">Sign In</button>
               </div>
 
               <div class="account-box">

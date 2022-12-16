@@ -12,17 +12,17 @@ const files = ref();
 const downloadImage = async () => {
   try {
       const { data, error } = await supabase
-          .from("profiles")
-          .select("avatar_url")
+        .from("profiles")
+        .select("avatar_url")
         .match({ id: 1 })
     console.log(data);
     console.log(data[0]);
     console.log(data[0].avatar_url);
     if (error) throw error;
     src.value = data[0].avatar_url;
-  } catch (error) {
+    } catch (error) {
     console.error("Error downloading image: ", error.message);
-  }
+    }
 };
 const uploadAvatar = async (evt) => {
   files.value = evt.target.files;
@@ -43,11 +43,11 @@ const uploadAvatar = async (evt) => {
     if (uploadError) throw uploadError;
     emit("update:path", filePath);
     emit("upload");
-  } catch (error) {
-    alert(error.message);
-  } finally {
+    } catch (error) {
+      alert(error.message);
+    } finally {
     uploading.value = false;
-  }
+    }
 };
 watch(path, () => {
   if (path.value) downloadImage();

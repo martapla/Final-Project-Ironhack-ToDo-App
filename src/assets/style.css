@@ -14,8 +14,6 @@
 }
 
 * { 
-    /* Margins */
-    /* border:solid 1px rgb(255, 127, 225);  */
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -35,8 +33,7 @@ body {
 /* -------------- SignUp -SignIn Component -------------*/
 
 .main-container {
-   background-image: url(https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
-
+    background-image: url(https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -179,9 +176,8 @@ body {
     background-color:var(--colorSignIn);
 }
 
-/* MediaQueries ---- SignIn-SignUp Components --
---------*/
-/* Media Query for Tablets and Desktop */
+/* ---------  MediaQueries SignIn-SignUp  ----------*/
+/* MediaQuery for Tablets and Desktop */
 
 @media screen and (min-width: 768px) {
 .header {
@@ -215,7 +211,7 @@ body {
  /* -------------------  HOME VIEW  -----------------------*/ 
 
 /* ----------------- Navbar Component ---------------------*/
-/* Media Query Mobile */
+/* MediaQuery Mobile First */
 .wrapper {
    background-color: var(--colorGreen);
 }

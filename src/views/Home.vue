@@ -2,14 +2,10 @@
   <div class="wrapper">
      <Nav />
 
-     <!-- <div class="content"> 
-       <h3>Your account:</h3>
-       <router-link to="/account" class="link-router">Account</router-link> 
-     </div> -->
-
      <NewTask @getTasksHijo="getTasks" />
 
      <h1 class="title-tasks">Tasks:</h1>
+     
      <div class="tasks-boxes">
         <TaskItem v-for="task in tasks" :key="task.id" :task="task" @getTasksHijo="getTasks" />
      </div>

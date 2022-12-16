@@ -29,11 +29,11 @@ export const useUserStore = defineStore("user", {
       if (error) throw error;
       if (user) {
         this.user = user;
-       console.log(this.user);
+        console.log(this.user);
 
         const { data: profile } = await supabase.from('profiles').insert([
           {
-           user_id: this.user.id,
+            user_id: this.user.id,
             username: username,
             email:email,
           },

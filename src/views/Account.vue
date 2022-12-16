@@ -16,7 +16,7 @@
 
         <div class="avatar-img">
              <Avatar v-model:path="avatar_url" @upload="profiles" class="avatar"/>
-          </div>   
+        </div>   
 
     </div>
 
@@ -38,7 +38,7 @@
           </div>
         </form>
     </div>
-</div>
+  </div>
 <Footer />
 </template>
 
