@@ -1,3 +1,8 @@
+![MacBook Air on the white desk_Screenshot 2022-12-20 at 00 13 01](https://user-images.githubusercontent.com/101716371/208549371-a150d0e4-45bf-468d-bc51-b6b5549e40c6.png)
+
+![iPhone 14 Pro in deep purple color_Screenshot 2022-12-20 at 00 18 18](https://user-images.githubusercontent.com/101716371/208549388-807d62d1-28ed-42ba-99b4-3c8bb215bfad.png)
+
+
 ## Project Journal:
 
 ### 5/12/2022:
