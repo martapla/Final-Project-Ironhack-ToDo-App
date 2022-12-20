@@ -1,4 +1,4 @@
-![Laptop_Screenshot 2022-12-20 at 00 13 01](https://user-images.githubusercontent.com/101716371/208551010-6b86aee8-bad6-4edd-bca7-5cc8ec76c0e2.png)
+![Laptop_Screenshot 2022-12-20 at 00 13 01](https://user-images.githubusercontent.com/101716371/208551193-8139bfc5-a43a-4d0a-83ea-3acf00cb1248.png)
 
 
 ## Project Journal:
