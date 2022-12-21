@@ -13,6 +13,7 @@ We have to build a To-do App with Vue.js that allows users to create an account,
 * Your app should be rendered in a browser
 * Your app should be deployed online using a cloud service such as Vercel
 * Your app should be your own design using CSS
+* Your app should be Responsive: mobile,tablet and Desktop
 * Your app should be fully integrated with a Supabase database using all CRUD operations
 * You should use Vue’s Pinia to fully implement status handling
 * You should handle any asynchronous operations using Promises or Async/await
