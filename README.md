@@ -1,7 +1,7 @@
 
 
 
-_This is the Final Project from IronHack Front End Bootcamp._
+### This is the Final Project from IronHack Front End Bootcamp.
 
 We have to build a To-do App with Vue.js that allows users to create an account, record tasks, edit them and mark them as complete. The app will be linked to a database, where all the user and task data will be stored. The database that we’ll use for this project is Supabase.
 
