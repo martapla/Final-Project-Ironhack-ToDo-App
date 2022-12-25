@@ -95,7 +95,6 @@ body {
 
 .form-sign {
     height: 500px;
-    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
